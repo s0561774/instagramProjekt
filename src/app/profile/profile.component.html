@@ -1,0 +1,125 @@
+<app-nav></app-nav>
+<br>
+<div class="container">
+
+    <div class="row" >
+        <div class="col-4" >
+            <img src="https://img-cdn.tnwcdn.com/image?fit=1200%2C900&height=900&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2020%2F04%2Ffree-photo-stock-photography-copyright.jpg&signature=dddf450c9db2544b3afde89b5254c73b" />
+        </div>
+        <div class="col-8 ">
+            <table>
+                <tr>
+                    <td colspan="2">Paulette Fokou</td>
+                    <td></td>
+                    <td  colspan="2">
+                        <button routerLink="/profile-edit"  mat-raised-button>Profil Bearbeiten</button>
+
+                          <mat-icon class="example-tab-icon">settings</mat-icon>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> <b>0</b> Beiträge</td>
+                    <td colspan="2" style="text-align: right;"> <b>219</b> Abonnenten</td>
+                    <td colspan="2" style="text-align: right;"> <b>490</b> abonniert</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-12">
+            <mat-tab-group mat-align-tabs="center">
+                <mat-tab >
+                  <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">grid_on</mat-icon>
+                    Beiträge
+                  </ng-template>
+                  
+                  <div class="container">
+                      <div class="row">
+
+                        <div class="col-6">
+                          <br />
+                            <mat-grid-list cols="3" rowHeight="2:1">
+                                <mat-grid-tile>
+                                <img class="photo" src= "https://images.pexels.com/photos/1003914/pexels-photo-1003914.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src= "https://media.istockphoto.com/photos/catholic-church-saint-jeanbaptiste-le-voeu-in-nice-france-picture-id1029593898?k=20&m=1029593898&s=612x612&w=0&h=ajZOXm4GKqt1vVC4RWPxRRKtc5GTrTFSRrZ06P2GXWo="/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://www.seabourn.com/content/dam/sbn/inventory-assets/ports/NCE/Nice-france.jpg.image.750.563.low.jpg"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://www.pincamp.de/campsites/prn:campsite:camping-le-petit-nice/images/Camping-Le-Petit-Nice-4b04ac36-947d-43db-8f80-1f5411c35227.jpg?w=1200&h=630&crop=edges&fit=crop"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://media.radissonhotels.net/image/radisson-blu-hotel-nice/poolview/16256-114179-f63734453_3xl.jpg?impolicy=CustomCrop&cwidth=800&cheight=610"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://img.myloview.de/bilder/have-a-nice-day-lettering-400-113125101.jpg"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://just-nice-torten.de/____impro/1/onewebmedia/rz1-logo-Just-Nice_transparent.png?etag=%229c4d8-5aa69e79%22&sourceContentType=image%2Fpng&ignoreAspectRatio&resize=462%2B327"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://klebeheld.de/media/image/9d/09/60/wandtattoo_have_a_nice_day_15728bf083cdd2.jpg"/>
+                                </mat-grid-tile>
+                                <mat-grid-tile>
+                                  <img class="photo" src="https://media-cdn.holidaycheck.com/w_768,h_432,c_fill,q_auto,f_auto/ugc/images/96483a98-bcb4-3c0e-897f-26e79896da31"/>
+                                </mat-grid-tile>
+                              </mat-grid-list>
+
+                        </div>
+                        <div class="col-6"></div>
+                      </div>
+                  </div>
+
+                </mat-tab>
+              
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">photo_size_select_actual</mat-icon>
+                    IGTV
+                  </ng-template>
+                  <div class="container">
+                      <br>
+                      <br>
+                    <div class="row">
+                        <div class="col-6">
+                            Videos
+                        </div>
+                        <div class="col-6" >
+                            <button class="btn btn-primary" style="float: right;" >Hochladen</button>
+                        </div>
+                      </div>
+                  </div>
+                </mat-tab>
+              
+                <mat-tab>
+                  <ng-template mat-tab-label>
+                    <mat-icon class="example-tab-icon">turned_in_not</mat-icon>
+                    GESPEICHERT
+                  </ng-template>
+              
+                  Content 3
+                </mat-tab>
+                <mat-tab>
+                    <ng-template mat-tab-label>
+                      <mat-icon class="example-tab-icon">account_box</mat-icon>
+                      MARKIERT
+                    </ng-template>
+                    <br>
+                    <div class="container">
+                        <div class="row" id="block">
+                            <img id="profile_image" src="http://simpleicon.com/wp-content/uploads/camera-256x256.png" alt="" >
+                            <h2>Fotos von dir</h2>
+                            <p>Hier findest du Fotos, in denen du markiert wurdest.</p>
+                        </div>
+                    </div>
+                  </mat-tab>
+              </mat-tab-group>
+        </div>
+    </div>
+</div>

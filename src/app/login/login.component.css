@@ -1,0 +1,45 @@
+mat-card:first(){
+
+ 
+    width: 60%;
+
+}
+mat-card{
+
+   margin-top: 1.5%;
+    width: 60%;
+
+}
+
+
+
+.form-group{
+    margin-top: 10px;
+}
+
+#durch{
+    font-size: 12px;
+    text-align: center;
+}
+
+p{
+    width: 100%;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    }
+    
+    h2 span {
+    background:#fff;
+    padding:0 10px;
+    }
+
+    .fehler{
+        background-color: red;
+        color: white;
+    }

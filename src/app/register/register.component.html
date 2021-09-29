@@ -1,0 +1,66 @@
+<mat-card>
+    <div>
+        
+            <h1>
+                Instagram
+            </h1>
+
+        <p>
+            Registriere dich, um die Fotos und Videos deiner Freunde zu sehen.
+        </p>
+
+        <p class= "form-group">
+            
+            <button class="btn btn-primary form-control">Mit Facebook anmelden</button>
+
+        </p>
+    </div>
+    
+        <mat-card-content>
+            <!-- [formGroup] = userFrom: c'est pour mapper l'objet userFrom de type formgroup qui est dans le fichier .ts
+            avec le formulaire ci-dessous qui se trouve dans le html-->
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+                <fieldset >
+                    <legend>
+                        <h2><span>Oder</span></h2>
+                    </legend>
+                   <div class="form-group">
+                       <!-- le formcontrolname fait la meme chose que le formcontrol sauf que lui s'utilise pour les control. Les controls sont des objets contenus dans le formulaire tels que les inputs, selects-->
+                        <input class="form-control" type="text" placeholder="Handynummer oder E-mail adresse"  formControlName="emailOrphone"/>
+                        <small *ngIf="userForm.controls.emailOrphone.invalid && (userForm.controls.emailOrphone.touched || userForm.controls.emailOrphone.dirty)"> Email oder telefonnummer ist ungültig</small>
+                   </div >
+                   <div class="form-group">
+                       <input class="form-control" type="text" placeholder="Vollständiger Name"  formControlName="fullname"/>
+                       <small *ngIf="userForm.controls.fullname.invalid && (userForm.controls.fullname.touched || userForm.controls.fullname.dirty)"> Vollständiger name muss mindentens 6 Zeichen enthalten</small>
+                  </div >
+   
+                   <div class="form-group">
+                       <input class="form-control" type="text" placeholder="Benutzername"  formControlName="username"/>
+                       <small *ngIf="userForm.controls.username.invalid && (userForm.controls.username.touched || userForm.controls.username.dirty)"> Benutzername ist ungültig</small>
+                   </div >
+   
+                   <div class="form-group">
+                       <input class="form-control" type="password" placeholder="Passwort"  formControlName="password"/>
+                       <small *ngIf="userForm.controls.password.invalid && (userForm.controls.password.touched || userForm.controls.password.dirty)"> Ihr Passwort ist falsch</small>
+                   </div >
+
+                   <div class="form-group">
+                    <input class="form-control btn btn-primary" type="submit" placeholder="weiter"/>
+                </div >
+   
+                </fieldset>
+              
+
+            </form>
+                <p id="durch">
+                    Durch die Registrierung stimmst du unseren Nutzungsbedingungen zu. 
+                    In unserer Datenrichtlinie erfährst du, wie wir deine Daten erfassen,
+                    verwenden und teilen. Unsere Cookie-Richtlinie erklärt, 
+                    wie wir Cookies und ähnliche Technologien verwenden.
+                </p>
+        </mat-card-content>
+</mat-card>
+<mat-card>
+    Du hast ein Konto? <a href="#">Melde dich an</a>
+</mat-card>
+

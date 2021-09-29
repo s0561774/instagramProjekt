@@ -1,0 +1,65 @@
+<!-- <div *ngIf="isCameraExist; else noCameraExist">
+    <div style="text-align:center">
+        <div class="btn-group">
+            <button class="button" (click)="takeSnapshot()">Take Picture</button>
+            <button class="button" (click)="changeWebCame(true)">Toggle Camera</button>
+            <button class="button" (click)="onOffWebCame()">Switch camera</button>
+        </div> <br />
+        <webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+            *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
+    </div>
+
+    <div *ngIf="errors.length > 0">
+        <h4>Error Messages:</h4>
+        <ul *ngFor="let error of errors">
+            <li>{{ error | json }}</li>
+        </ul>
+    </div>
+</div>
+
+<ng-template #noCameraExist>
+    Camera device not available
+</ng-template>
+
+<br>
+<br>
+
+<h3>{{lon}}</h3>
+<h3>{{lat}} </h3>
+
+
+ -->
+
+ <app-nav></app-nav>
+ <br>
+ <br>
+ <div class="container">
+    <mat-drawer-container class="example-container">
+        <mat-drawer mode="side" opened>
+          <ul>
+            <li routerLinkActive="activebutton">
+              <a href="#"  routerLink="/profile-edit/image" >FotoProfil</a>
+            </li>
+            <li routerLinkActive="activebutton">
+              <a href="#"  routerLink="/profile-edit/info">Informationen</a>
+            </li>
+            <li routerLinkActive="activebutton">
+              <a href="#" routerLink= "/profile-edit/settings">Einstellungs</a>
+            </li>
+          </ul>
+        </mat-drawer>
+        <mat-drawer-content>
+            <div class="container">
+                <br>
+                <div class="row">
+                  <router-outlet class="col-12"></router-outlet>
+                </div>
+            </div>
+    
+        </mat-drawer-content>
+      </mat-drawer-container>
+    
+ </div>
+ 
+
+  

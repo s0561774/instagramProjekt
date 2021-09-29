@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <img [src]="currentImage" />
+        </div>
+        <div class="col-6">
+            <button class="btn btn-primary" (click)="changes()">
+                Profilbild Bearbeiten   
+            </button>
+            <br>
+            <br>
+            <button class="btn btn-success" (click)="capture()" *ngIf="isChanging">Nimm ein foto</button>
+            <br>
+            <br>
+            <button class="btn btn-danger" (click)="hide()" *ngIf="isChanging">Hide</button>
+        </div>
+    </div>
+    <div class="row" *ngIf="isChanging">
+        <div><video #video id="video" width="640" height="480" autoplay></video></div>
+        <canvas #canvas id="canvas" width="640" height="480"></canvas>
+        <br>
+        <button class="btn btn-danger" (click)="stopVideo()" >Stop</button>
+       
+        <!--<webcam [height]="500" [width]="1000" [trigger]="triggerObservable" (imageCapture)="handleImage($event)"
+            *ngIf="showWebcam" [switchCamera]="nextWebcamObservable"></webcam>
+            <p>
+                <button class="button" (click)="takeSnapshot()">Take Picture</button>
+                <button class="button" (click)="changeWebCame(true)">Toggle Camera</button>
+            </p>-->
+    </div>
+</div>

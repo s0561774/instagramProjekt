@@ -1,0 +1,25 @@
+img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#profile_image{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: auto;
+    border: 0.5px solid gray;
+}
+
+#block, #block h2, #block p{
+    margin: auto;
+    text-align: center;
+}
+:host::ng-deep mat-grid-list mat-grid-tile .photo{
+    width: 100% !important;
+    padding: 2px;
+    height: 100px;
+    max-width: 100%;
+    border-radius: 0%;
+}
